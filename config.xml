@@ -2,21 +2,21 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "org.edulabs.hirtenberger"
         versionCode = "20200"
-        version   = "3.3.2">
-    <name>Moodle Mobile</name>
+        version   = "1.0.4">
+    <name>Hirtenberger Mobile Learning</name>
 
     <description>
-        Moodle Mobile official app
+        Hirtenberger Mobile Learning
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+    <author href="http://www.edulabs.org" email="info@edulabs.org">
+        Edulabs
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>3.3.2</string>
+        <string>1.0.4</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
@@ -49,6 +49,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="AllowInlineMediaPlayback" value="true"/>
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
@@ -115,7 +116,7 @@
     </platform>
 
     <gap:plugin name="cordova-plugin-camera" source="npm" />
-    <gap:plugin name="cordova-plugin-media-capture" source="npm">
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" spec="*">
         <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo"/>
         <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo"/>
         <param name="MICROPHONE_USAGE_DESCRIPTION" value="We'd like to access your microphone to let you record an audio"/>
@@ -542,6 +543,10 @@
         <dict>
             <key>NSAllowsArbitraryLoads</key><true/>
         </dict>
+    </gap:config-file>
+
+    <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
+        <string>We'd like to access your photo library to let you upload a photo or image to the site.</string>
     </gap:config-file>
 
 </widget>
