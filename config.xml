@@ -4,19 +4,19 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "org.edulabs.kaiptc"
         versionCode = "20210"
-        version   = "1.0.0">
-    <name>kaiptc Mobile</name>
+        version   = "1.0.1">
+    <name>KAIPTC LMS</name>
 
     <description>
-        Moodle Mobile official app
+        KAIPTC LMS
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+    <author href="http://www.edulabs.org" email="info@edulabs.org">
+        edulabs.org
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>1.0.0</string>
+        <string>1.0.1</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
